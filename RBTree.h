@@ -266,7 +266,7 @@ void RBTree<T>::preOrder() {
      RBTNode<T> *p = minimum(mRoot);
      if(p!= nullptr)
         return p->key;
-     return T(nullptr);
+     return long(nullptr);
  }
  /**
   * 查找最大节点
@@ -283,9 +283,13 @@ void RBTree<T>::preOrder() {
  template <class T>
  T RBTree<T>::maxinum()  {
      RBTNode<T>* p = maximum(mRoot);
-    if(p!=nullptr)
-        return p->key;
-     return T(nullptr);
+     if(p!=nullptr)
+         return p->key;
+    bool is_type = std::is_same<int,T>::value;
+    cout<<"is_type "<<is_type<<endl;
+
+
+     return long(nullptr);
  }
 
  /**
